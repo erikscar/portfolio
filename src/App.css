@@ -1,18 +1,29 @@
-.main-container {
-    background-color: #0f172a;
+.hero {
+    position: relative;
     min-height: 100vh;
-    padding: 4rem;
-    background-image: url('/public/crayion.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), #0b1421);
+}
+
+.teste {
+    background-image: url("/crayion.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.hero-background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 2rem;
+    padding: 4rem 15rem 4rem 4rem;
 }
 
 .nav-bar {
@@ -22,11 +33,15 @@ header {
     font-size: 20px;
 }
 
-.main-wrapper {
+.hero-foreground {
+    padding: 4rem;
+}
+
+.hero-foreground-wrapper {
     display: flex;
     justify-content: space-around;
-    gap: 5rem;
     align-items: center;
+    gap: 15rem;
 }
 
 .main-name {
@@ -41,29 +56,32 @@ header {
 }
 
 .code-img {
-    width: 20rem;
+    width: 35rem;
 }
 
 .description-wrapper {
-    padding-left: 20rem;
-    width: 55rem;
+    margin-top: 8rem;
+    padding-left: 40rem;
+    width: 75rem;
+    text-align: justify;
 }
 .hey {
     font-size:38px;
 }
+
 .description {
     line-height: 2rem;
 }
 
 .section-title {
-    margin-top: 1rem;
     text-align: center;
     font-weight: 800;
-    font-size: 90px;
+    font-size: 100px;
     letter-spacing: 1rem;
     color: rgba(0, 191, 143, 0.3);
     display: flex;
     align-items: center;
+    padding: 0 6rem;
 }
 
 .bi-person,
@@ -75,15 +93,21 @@ header {
 .right {
     justify-content: flex-end;
 }
-
-.profile-img-wrapper {
+.aboutme-section,
+.projects-section,
+.stacks-section {
+    min-height: 100vh
+}
+.aboutme-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 4rem;
     padding: 2rem;
+    margin-top: 3rem;
 }
 
 .profile-img {
-    width: 18rem;
+    width: 24rem;
     border-radius: 2rem;
     margin-bottom: 2rem;
 }
@@ -91,24 +115,28 @@ header {
 .aboutme-description-wrapper {
     width: 50rem;
     padding: 2rem;
+    text-align: justify;
 }
 
 .aboutme-title {
     color: #00bf8f;
+    margin: 1rem 0;
 }
 
 .aboutme-subtitle {
     font-size: 28px;
+    margin: 1rem 0;
 }
 
 .aboutme-description {
     padding-bottom: 1rem;
+    font-size: 18px;
     line-height: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .personal-info-container {
-    margin-top: 1rem;
+    margin: 3rem 0;
     display: flex;
     align-items: center;
     gap: 10rem
@@ -122,7 +150,6 @@ header {
 }
 .cv-button,
 .github-btn {
-    margin-top: 2rem;
     border: 1px solid #00bf8f;
     border-radius: 1rem;
     background-color: transparent;
@@ -130,11 +157,14 @@ header {
     font-size: 16px;
     cursor: pointer;
     transition: 1s;
+    margin: 0 1rem;
 }
+
 .cv-button:hover,
 .github-btn:hover {
     transform: scale(1.1);
     background-color: #00bf8f;
+    color: #0b1421;
 }
 
 .is-grey {
@@ -154,33 +184,42 @@ header {
 .project-card {
     display: flex;
     align-items: center;
-    padding: 2rem;
-    background-color: rgb(20, 22, 37, 0.7)
+    justify-content: center;
+    gap: 4rem;
+    margin: 2rem 5rem;
+    padding: 2rem 4rem;
+    background-color: rgb(20, 22, 37, 0.8);
+    border-radius: 1rem;
 }
 
 .project-img {
-    width: 30rem;
-    height: 20rem;
+    width: 45rem;
     border-radius: .5rem;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 70px;
+    font-weight: 200;
+    padding: 1rem;
+    margin: 2rem 0;
 }
 .project-description {
     padding: 2rem;
-    line-height: 2rem;
+    line-height: 3rem;
+    width: 50rem;
+    font-size: 22px;
 }
-.project-title {
-    font-size: 35px;
-    font-weight: 200;
-    padding: 1rem;
-}
+
 .project-badges {
-    margin-top: 2rem ;
+    margin: 2.5rem 0 ;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
 }
 .p-badges {
-    width: 2rem;
+    width: 3rem;
     border-radius: .5rem;
 }
 
@@ -194,9 +233,13 @@ header {
     cursor: pointer;
     transition: .5s;
 }
+
 .search-tech-btn:hover {
     transform: scale(1.1);
+    background-color: #00bf8f;
+    color: #0b1421;
 }
+
 .badges-container {
     display: flex;
     justify-content: center;
@@ -211,10 +254,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
+    margin: 8rem;
+    font-size: 20px;
 }
+
 .badge {
-    width: 4rem;
+    width: 7rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
@@ -223,6 +268,8 @@ footer{
     display: flex;
     justify-content: space-evenly;
     gap: 3rem;
+    height: 15vh;
+    margin-bottom: 3rem;
 }
 
 .footer-wrapper {
@@ -244,7 +291,7 @@ footer{
 
 .copy {
     text-align: center;
-    margin-top: 4rem;
+    padding: 4rem 0;
 }
 
 .text-align-center {
