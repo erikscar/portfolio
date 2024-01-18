@@ -1,13 +1,18 @@
 .main-container {
     background-color: #0f172a;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 4rem;
+    background-image: url('/public/crayion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 2rem;
 }
 
 .nav-bar {
@@ -17,19 +22,123 @@ header {
     font-size: 20px;
 }
 
-.contact-btn {
-    background: linear-gradient(to right, #00bf8f, #00151094);
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+.main-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    align-items: center;
+}
+
+.main-name {
+    font-size: 75px;
+    color: #00bf8f;
+}
+
+.role-name {
+    letter-spacing: .75rem;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.code-img {
+    width: 20rem;
+}
+
+.description-wrapper {
+    padding-left: 20rem;
+    width: 55rem;
+}
+.hey {
+    font-size:38px;
+}
+.description {
+    line-height: 2rem;
 }
 
 .section-title {
     margin-top: 1rem;
     text-align: center;
-    font-weight: 100;
-    font-size: 50px;
+    font-weight: 800;
+    font-size: 90px;
     letter-spacing: 1rem;
+    color: rgba(0, 191, 143, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.bi-person,
+.bi-code-slash,
+.bi-memory {
+    color: rgba(0, 191, 143, 0.3);
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.profile-img-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.profile-img {
+    width: 18rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aboutme-description-wrapper {
+    width: 50rem;
+    padding: 2rem;
+}
+
+.aboutme-title {
+    color: #00bf8f;
+}
+
+.aboutme-subtitle {
+    font-size: 28px;
+}
+
+.aboutme-description {
+    padding-bottom: 1rem;
+    line-height: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.personal-info-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10rem
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 18px;
+}
+.cv-button,
+.github-btn {
+    margin-top: 2rem;
+    border: 1px solid #00bf8f;
+    border-radius: 1rem;
+    background-color: transparent;
+    padding: .75rem 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 1s;
+}
+.cv-button:hover,
+.github-btn:hover {
+    transform: scale(1.1);
+    background-color: #00bf8f;
+}
+
+.is-grey {
+    color:rgba(255, 255, 255, 0.6);
 }
 
 .portifolio-nav-bar {
@@ -41,6 +150,40 @@ header {
     padding: 4rem;
     margin: 0 5rem
 }
+
+.project-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(20, 22, 37, 0.7)
+}
+
+.project-img {
+    width: 30rem;
+    height: 20rem;
+    border-radius: .5rem;
+}
+.project-description {
+    padding: 2rem;
+    line-height: 2rem;
+}
+.project-title {
+    font-size: 35px;
+    font-weight: 200;
+    padding: 1rem;
+}
+.project-badges {
+    margin-top: 2rem ;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.p-badges {
+    width: 2rem;
+    border-radius: .5rem;
+}
+
 
 .search-tech-btn {
     background-color: transparent;
@@ -86,18 +229,22 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
 }
 
 .footer-infos {
-    font-size: 1.2rem;
+    font-size: 20px;
     display: flex;
     gap: 1rem;
-    text-align: center;
+}
+
+.socials-btn {
+    font-size: 20px;
 }
 
 .copy {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .text-align-center {
