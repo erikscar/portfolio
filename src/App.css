@@ -1,10 +1,10 @@
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #121624);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), #0b1421);
 }
 
-.teste {
+.main-container {
     background-image: url("/crayion.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +17,7 @@
     position: absolute;
     z-index: -1;
     object-fit: cover;
+    top: 0;
 }
 
 header {
@@ -63,6 +64,7 @@ header {
     padding-left: 40rem;
     width: 75rem;
     text-align: justify;
+    margin-top: 5rem;
 }
 .hey {
     font-size:38px;
