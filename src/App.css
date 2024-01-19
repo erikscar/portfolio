@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), #0b1421);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #121624);
 }
 
 .teste {
@@ -34,7 +34,7 @@ header {
 }
 
 .hero-foreground {
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .hero-foreground-wrapper {
@@ -45,7 +45,7 @@ header {
 }
 
 .main-name {
-    font-size: 75px;
+    font-size: 60px;
     color: #00bf8f;
 }
 
@@ -56,11 +56,10 @@ header {
 }
 
 .code-img {
-    width: 35rem;
+    width: 20rem;
 }
 
 .description-wrapper {
-    margin-top: 8rem;
     padding-left: 40rem;
     width: 75rem;
     text-align: justify;
@@ -186,20 +185,20 @@ header {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin: 2rem 5rem;
-    padding: 2rem 4rem;
+    margin: 2rem;
+    padding: 2rem;
     background-color: rgb(20, 22, 37, 0.8);
     border-radius: 1rem;
 }
 
 .project-img {
-    width: 45rem;
+    width: 30rem;
     border-radius: .5rem;
     object-fit: cover;
 }
 
 .project-title {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 200;
     padding: 1rem;
     margin: 2rem 0;
@@ -208,7 +207,7 @@ header {
     padding: 2rem;
     line-height: 3rem;
     width: 50rem;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .project-badges {
@@ -236,6 +235,11 @@ header {
 
 .search-tech-btn:hover {
     transform: scale(1.1);
+    background-color: #00bf8f;
+    color: #0b1421;
+}
+
+.checked {
     background-color: #00bf8f;
     color: #0b1421;
 }
