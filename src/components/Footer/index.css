@@ -1,0 +1,63 @@
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  height: 15vh;
+  margin-bottom: 3rem;
+  font-size: 20px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-infos {
+  display: flex;
+  gap: 1rem;
+}
+
+.bi-github,
+.bi-linkedin {
+  margin: .5rem;
+  font-size: 26px;
+}
+
+.copy {
+  font-size: 20px;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width:1024px) {
+  footer {
+    padding-top: 20rem;
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .footer-title {
+    font-size: 20px;
+  }
+  .footer-infos {
+    margin: 0 auto;
+  }
+  .copy {
+    padding-top: 20rem;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width:700px) {
+  .footer-title {
+    font-size: 24px;
+  }
+  .copy {
+    font-size: 20px;
+  }
+}
+
+
+
+

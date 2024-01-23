@@ -1,0 +1,34 @@
+.badges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem;
+  font-size: 20px;
+}
+
+.badge {
+  width: 7rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width:500px) {
+  .badges-container {
+    gap: 2rem;
+    padding: 0;
+  }
+  .technologies {
+    margin: 2rem, 2rem, 2rem, 2rem;
+  }
+
+}
