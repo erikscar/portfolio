@@ -22,7 +22,7 @@ export default function ProjectsNav() {
         PROJETOS <i class="bi bi-code-slash"></i>
       </h1>
       <nav className="projects-nav-bar">
-        <button className={getBtnClass("all")} onClick={() => handleBtnClick("all")}>All</button>
+        <button className={getBtnClass("all")} onClick={() => handleBtnClick("all")}>Todos</button>
         <button className={getBtnClass("react")} onClick={() => handleBtnClick("react")}>React.JS</button>
         <button className={getBtnClass("js")} onClick={() => handleBtnClick("js")}>Javascript</button>
         <button className={getBtnClass("ts")} onClick={() => handleBtnClick("ts")}>Typescript</button>
