@@ -45,6 +45,7 @@ section {
     cursor: pointer;
     transition: .75s;
     margin: 0 1.5rem 1rem 0;
+    width: 12rem;
 }
 
 .common-btn:hover {

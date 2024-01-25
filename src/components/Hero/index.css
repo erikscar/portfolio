@@ -42,14 +42,20 @@
 .icons-wrapper {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
   text-align: center;
   margin-top: 5rem;
+}
+
+.common-btn {
+  width: auto;
 }
 
 .is-large {
   padding: .5rem 3rem;
 }
+
 
 @media only screen and (min-width: 320px) and (max-width:500px) {
   .hero-foreground {
