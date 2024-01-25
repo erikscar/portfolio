@@ -19,7 +19,7 @@ export default function ProjectsNav() {
   return (
     <section id="projects">
       <h1 className="section-title">
-        PROJECTS <i class="bi bi-code-slash"></i>
+        PROJETOS <i class="bi bi-code-slash"></i>
       </h1>
       <nav className="projects-nav-bar">
         <button className={getBtnClass("all")} onClick={() => handleBtnClick("all")}>All</button>

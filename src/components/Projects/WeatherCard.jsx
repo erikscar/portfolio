@@ -1,16 +1,12 @@
 export default function WeatherCard() {
   return (
     <div className="project-card">
+      <p className="project-title">Weather Card</p>
       <img src="/projects-img/weathercard.png" alt="" className="project-img" />
 
-      <div className="project-description">
-        <p className="project-title">Weather Card</p>
-        <p>
-          Developed using modern web technologies, the site displays an
-          intuitive card that shows crucial weather data based on the city
-          entered by the user. The data is fetched from a weather API,
-          providing accurate and up-to-date information to enhance the user
-          experience.
+      <div>
+        <p className="project-description">
+          Com o WeatherCard, você pode visualizar dados meteorológicos essenciais ao inserir o nome da cidade desejada. Acesse informações precisas provenientes do consumo da Open Weather API de maneira simples e eficiente.
         </p>
 
         <div className="project-badges">
@@ -21,12 +17,16 @@ export default function WeatherCard() {
 
         </div>
         <div className="btn-group">
-          <a href="https://github.com/erikscar/weather-card-app" target="_blank" className="common-btn">
-            See in GitHub
-          </a>
-          <a href="https://weather-card-app-silk.vercel.app/" target="_blank" className="common-btn">
-            View Site
-          </a>
+          <button className="common-btn">
+            <a href="https://github.com/erikscar/weather-card-app" target="_blank" className="anchor-hover">
+              <i class="bi bi-github"></i>GitHub
+            </a>
+          </button>
+          <button className="common-btn">
+            <a href="https://weather-card-app-silk.vercel.app/" target="_blank" className="anchor-hover">
+              <i class="bi bi-box-arrow-up-right"> Site</i>
+            </a>
+          </button>
         </div>
       </div>
     </div>

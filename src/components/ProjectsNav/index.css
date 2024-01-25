@@ -8,55 +8,69 @@
   margin: 0 5rem
 }
 
-.project-card {
+.projects-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem;
-  padding: 2rem;
-  background-color: rgb(20, 22, 37, 0.8);
-  border-radius: 1rem;
-}
-
-.project-img {
-  width: 45rem;
-  border-radius: .5rem;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 50px;
-  font-weight: 200;
-  padding: 1rem;
-  margin: 2rem 0;
-}
-
-.project-description {
-  padding: 2rem;
-  line-height: 3rem;
-  width: 50rem;
-  font-size: 18px;
-}
-
-.project-badges {
-  margin: 2.5rem 0 ;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 22, 37, 0.8);
+  height: 45rem;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.project-title {
+  background: linear-gradient(to bottom, rgba(84, 84, 85, 0.9), #00bf8f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2rem;
+  font-size: 45px;
+}
+
+.project-img {
+  width: 25rem;
+  border-radius: 1rem;
+}
+
+.project-description {
+  width: 25rem;
+  height: 10rem;
+  text-align: justify;
+  margin: 2rem 0;
+  line-height: 2rem;
+}
+
+.project-badges {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 .p-badges {
-  width: 3.5rem;
-  border-radius: .5rem;
+  width: 2.5rem;
 }
 
 .checked {
   background-color: #00bf8f;
   color: #0b1421;
 } 
+
+.anchor-hover:hover {
+  color: #000;
+}
+
+.bi-github{
+  font-size: 20px;
+}
 
 @media only screen and (min-width: 320px) and (max-width:1024px) {
   .projects-nav-bar {
@@ -65,6 +79,7 @@
 
   .project-card {
     flex-direction: column;
+    height: 55rem;
   }
 
   .project-img {
@@ -81,6 +96,7 @@
     padding: 0;
   }
   .p-badges {
+    margin-top: 5rem;
     width: 2.5rem;
   }
   .btn-group {

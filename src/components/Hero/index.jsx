@@ -12,21 +12,20 @@ export default function Hero() {
           <div>
             <h1 className="main-name">ERIK</h1>
             <h1 className="main-name">SCARCELA</h1>
-            <h2 className="role-name">FULL STACK DEVELOPER</h2>
+            <h2 className="role-name">DESENVOLVEDOR FULLSTACK</h2>
           </div>
           <div>
             <img src="/code.png" alt="code-png" className="code-img" />
           </div>
         </div>
 
-        <div className="description-wrapper">
-          <p className="hey">HEY,</p>
-          <p className="description">
-            I'm a Full-stack developer dedicated to creating remarkable and
-            engaging digital solutions. My portfolio reflects my passion for
-            transforming creative concepts into functional reality, highlighting
-            my ability to work on all layers of a project.
-          </p>
+        <div className="icons-wrapper">
+          <button className="common-btn is-large">
+            <a href="https://www.linkedin.com/in/erik-scarcela/" target="_blank"><i class="bi bi-linkedin"></i>Linkedin</a>
+          </button>
+          <button className="common-btn is-large">
+            <a href="https://github.com/erikscar" target="_blank"><i class="bi bi-github"></i>GitHub</a>
+          </button>
         </div>
       </div>
     </div>

@@ -1,16 +1,12 @@
 export default function SpaceXCloneCard() {
   return (
     <div className="project-card">
+      <p className="project-title">SpaceX Clone</p>
       <img src="/projects-img/spacex-clone.png" alt="" className="project-img" />
 
-      <div className="project-description">
-        <p className="project-title">SpaceX Clone</p>
-        <p>
-          This project is a web development initiative that aims to create a
-          clone of the official SpaceX website using modern technologies such
-          as Bootstrap and Sass. SpaceX is known for its innovative interface
-          and engaging content, and this project aims to replicate these
-          aspects in an educational and practical way.
+      <div>
+        <p className="project-description">
+          Página web que reproduz o design e layout distintivo do site da SpaceX, com a replicação das estilizações e elementos visuais.
         </p>
 
         <div className="project-badges">
@@ -20,20 +16,24 @@ export default function SpaceXCloneCard() {
           <img src="/badges/bootstrap.png" alt="api" className="p-badges" />
         </div>
         <div className="btn-group">
-          <a
-            href="https://github.com/erikscar/spaceX-page-clone"
-            target="_blank"
-            className="common-btn"
-          >
-            See in GitHub
-          </a>
-          <a
-            href="https://vercel.com/erikscars-projects/spacex-page-clone"
-            target="_blank"
-            className="common-btn"
-          >
-            View Site
-          </a>
+          <button className="common-btn">
+            <a
+              href="https://github.com/erikscar/spaceX-page-clone"
+              target="_blank"
+              className="anchor-hover"
+            >
+              <i class="bi bi-github"></i>GitHub
+            </a>
+          </button>
+          <button className="common-btn">
+            <a
+              href="https://vercel.com/erikscars-projects/spacex-page-clone"
+              target="_blank"
+              className="anchor-hover"
+            >
+              <i class="bi bi-box-arrow-up-right"> Site</i>
+            </a>
+          </button>
         </div>
       </div>
     </div>

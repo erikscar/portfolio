@@ -6,7 +6,7 @@ export default function Stacks() {
 
     <section id="technologies">
       <h1 className="section-title right">
-        <i class="bi bi-memory"></i>TECHNOLOGIES
+        <i class="bi bi-memory"></i>TECNOLOGIAS
       </h1>
       <Badges />
     </section>

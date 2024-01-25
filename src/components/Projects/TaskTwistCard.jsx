@@ -1,11 +1,13 @@
 export default function TaskTwistCard() {
   return (
     <div className="project-card">
+      <p className="project-title">TaskTwist</p>
       <img src="/projects-img/tasktwist.png" alt="" className="project-img" />
 
-      <div className="project-description">
-        <p className="project-title">TaskTwist</p>
-        <p>TaskTwist, a task registration system that will use CRUD operations making use of Node.JS/Express.JS and MongoDB for the Back-End and EJS with CSS for the Front-End.</p>
+      <div>
+        <p className="project-description">
+          TaskTwist é um sistema intuitivo que capacita os usuários a visualizarem, registrarem, atualizarem e removerem checklists e tarefas com facilidade. Simplifique sua gestão de afazeres com a praticidade do TaskTwist.
+        </p>
 
         <div className="project-badges">
           <img src="/badges/mongodb.png" alt="mongodb" className="p-badges" />
@@ -15,7 +17,11 @@ export default function TaskTwistCard() {
           <img src="/badges/express.png" alt="express" className="p-badges" />
           <img src="/badges/css.png" alt="css" className="p-badges" />
         </div>
-        <div className="btn-group"><a href="https://github.com/erikscar/TaskTwist" target="_blank" className="common-btn">See in GitHub</a></div>
+        <div className="btn-group">
+          <button className="common-btn">
+            <a href="https://github.com/erikscar/TaskTwist" target="_blank" className="anchor-hover"><i class="bi bi-github"></i>GitHub</a>
+          </button>
+        </div>
       </div>
     </div>
   )

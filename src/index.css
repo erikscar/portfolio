@@ -5,14 +5,3 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
-
-a {
-    text-decoration: 0;
-    color: #FFF;
-    transition: .75s;
-}
-a:hover {
-    color: #00bf8f;
-    transform: scale(1.2);
-}
-

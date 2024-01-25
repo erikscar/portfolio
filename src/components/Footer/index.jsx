@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer id="contact">
         <div className="footer-wrapper">
-          <h2 className="footer-title">Contact Me</h2>
+          <h2 className="footer-title">Contato</h2>
           <div className="footer-infos">
             <i class="bi bi-telephone-x"></i>+55 (11) 9 4008-0990
           </div>
@@ -14,11 +14,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-wrapper">
-          <h2 className="footer-title">Quick Links</h2>
-          <a href="#">Home</a>
-          <a href="#aboutme">About Me</a>
-          <a href="#projects">Projects</a>
-          <a href="#technologies">Technologies</a>
+          <h2 className="footer-title">Links</h2>
+          <a href="#">Início</a>
+          <a href="#aboutme">Sobre</a>
+          <a href="#projects">Projetos</a>
+          <a href="#technologies">Tecnologias</a>
         </div>
         <div className="footer-wrapper">
           <h2 className="footer-title">Erik Scarcela Araujo</h2>
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <p className="copy is-grey">&copy; Created by Erik Scarela Araujo</p>
+      <p className="copy is-grey">&copy; Criado por Erik Scarela Araujo</p>
     </>
   )
 }
