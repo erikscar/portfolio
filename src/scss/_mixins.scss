@@ -1,26 +1,61 @@
-@mixin display-flex() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-  @mixin tablet {
-    @media (min-width: 576px) { @content; }
-  }
-  
-  @mixin laptop {
-    @media (min-width: 768px) { @content; }
-  }
-  
-  @mixin desktop {
-    @media (min-width: 992px) { @content; }
-  }
-  
-  @mixin large-desktop {
-    @media (min-width: 1200px) { @content; }
-  }
+@use "../scss/variables" as *;
 
-  @mixin extra-large-desktop {
-    @media (min-width: 1400px) { @content; }
+@mixin display-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin section-title {
+  color: $primary-color;
+  font-size: 22px;
+  text-align: center;
+
+  @include tablet() {
+    text-align: start;
+    font-size: 26px;
   }
-  
+}
+
+@mixin section-description {
+  color: $grey-color;
+  font-size: 12px;
+  margin-top: .5rem;
+  max-width: 35rem;
+  text-align: center;
+
+  @include tablet() {
+    text-align: start;
+    font-size: 14px;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra-large-desktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

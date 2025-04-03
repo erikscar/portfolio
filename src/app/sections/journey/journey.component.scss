@@ -7,18 +7,16 @@
     width: 100%;
     padding: 1.5rem;
 
+    @include tablet {
+        padding: 1.5rem 4rem;
+    }
+
     .journey-title {
-        color: $primary-color; 
-        font-size: 22px;
-        text-align: center;
+        @include section-title();
     }
 
     .journey-description {
-        color: $grey-color;
-        font-size: 12px;
-        margin-top: .5rem;
-        max-width: 35rem;
-        text-align: center;
+        @include section-description();
     }
 
     .journey-container {
@@ -49,6 +47,10 @@
                 h2 {
                     margin-top: 1.5rem;
                     font-size: 18px;
+
+                    @include tablet {
+                        font-size: 20px;
+                    }
                 }
 
                 h3 {
@@ -58,12 +60,21 @@
                     color: $primary-color;
                     letter-spacing: .05rem;
                     text-align: center;
+
+                    @include tablet {
+                        text-align: start;
+                        font-size: 16px;
+                    }
                 }
 
                 p {
                     margin-top: .25rem;
                     font-size: 12px;
                     color: $grey-color;
+
+                    @include tablet {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -78,13 +89,20 @@
 
             .academic-card {
                 background-color: rgba(66, 65, 65, 0.2);
-                padding: 1.5rem;
+                padding: 1rem 1.5rem 1.5rem 1.5rem;
                 margin-top: 1rem;
-
+                border-radius: .5rem;
+                
                 .academic-card-title-wrapper {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+
+                    @include tablet {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
 
                     h1 {
                         font-size: 14px;
@@ -114,12 +132,20 @@
                     font-size: 12px;
                     font-weight: 400;
                     letter-spacing: .1rem;
+
+                    @include tablet {
+                        font-size: 14px;
+                    }
                 }
 
                 p {
                     font-size: 12px;
                     color: $grey-color;
                     margin-top: .5rem;
+
+                    @include tablet {
+                        font-size: 14px;
+                    }
                 }
             }
 
