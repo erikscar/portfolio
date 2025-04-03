@@ -1,0 +1,139 @@
+@use "../../../scss/mixins" as *;
+@use "../../../scss/variables" as *;
+
+
+#journey-section {
+    background-color: #15181C;
+    width: 100%;
+    padding: 1.5rem;
+
+    .journey-title {
+        color: $primary-color; 
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .journey-description {
+        color: $grey-color;
+        font-size: 12px;
+        margin-top: .5rem;
+        max-width: 35rem;
+        text-align: center;
+    }
+
+    .journey-container {
+
+        .experience {
+            margin-top: 2rem;
+
+            .journey-subtitle {
+                font-size: 22px;
+                font-weight: 900;
+            }
+
+            .journey-content {
+                border-left: 1px solid $primary-color;
+                padding:0 0 .75rem 1rem;
+                position: relative;
+
+                .circle {
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 100%;
+                    background-color: $primary-color;
+                    top: 0;
+                    left: -8px;
+                }
+
+                h2 {
+                    margin-top: 1.5rem;
+                    font-size: 18px;
+                }
+
+                h3 {
+                    margin-top: .75rem;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $primary-color;
+                    letter-spacing: .05rem;
+                    text-align: center;
+                }
+
+                p {
+                    margin-top: .25rem;
+                    font-size: 12px;
+                    color: $grey-color;
+                }
+            }
+        }
+
+        .academic-background {
+
+            .journey-subtitle {
+                font-size: 22px;
+                font-weight: 900;
+                margin-top: 2rem;
+            }
+
+            .academic-card {
+                background-color: rgba(66, 65, 65, 0.2);
+                padding: 1.5rem;
+                margin-top: 1rem;
+
+                .academic-card-title-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h1 {
+                        font-size: 14px;
+                    }
+
+                    div {
+                        background-color: $primary-color;
+                        padding: .5rem 1.25rem;
+                        border-radius: 1rem;
+                        color: $black-color;
+                        font-weight: 900;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: .5rem;
+
+                        i { 
+                            color: $black-color;
+                        }
+                    }
+                }
+
+                h2 {
+                    color: $primary-color;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: .1rem;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: $grey-color;
+                    margin-top: .5rem;
+                }
+            }
+
+            .academic-btn-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: .5rem;
+
+                button {
+                    background-color: transparent;
+                    border: 0;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

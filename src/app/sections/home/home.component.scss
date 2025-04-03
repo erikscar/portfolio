@@ -3,7 +3,6 @@
 
 
 #home-section {
-    min-height: 100vh;
     background-color: #15181C;
     width: 100%;
     padding: 1.5rem;
@@ -25,7 +24,8 @@
             border-radius: 100%;
             position: absolute;
             bottom: -2.5rem;
-            right: 65%;
+            left: 5%;
+            // transform: translateX(-50%);
             border: 1px solid $white-color;
         }
     }
