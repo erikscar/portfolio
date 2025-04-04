@@ -3,14 +3,8 @@
 
 
 #home-section {
-    background-color: #15181C;
-    width: 100%;
-    padding: 1.5rem;
+    @include section-container();
     position: relative;
-
-    @include tablet {
-        padding: 1.5rem 4rem;
-    }
 
     .home-animation-wrapper {
         width: 100%;
@@ -18,6 +12,15 @@
         background-color: $primary-color;
         margin: 0 auto;
         position: relative;
+
+        @include laptop () {
+            height: 8rem;
+        }
+
+        @include extra-large-desktop () {
+            height: 14rem;
+        }
+
 
         img {
             width: 5rem;
@@ -33,6 +36,20 @@
                 height: 6rem;
                 bottom: -3rem;
             }
+
+            @include laptop() {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            @include extra-large-desktop () {
+                width: 13rem;
+                height: 13rem;
+                bottom: -5rem;
+                left: 3%;
+            }
+
+
         }
     }
 
@@ -48,9 +65,12 @@
     .home-title {
         display: flex;
         align-items: center;
-        gap: .25rem;
+        gap: .3rem;
         margin-top: 3.5rem;
 
+        @include extra-large-desktop () {
+            margin-top: 5.5rem;
+        }
 
         h1 {
             font-size: 20px;
@@ -58,11 +78,20 @@
             @include tablet {
                 font-size: 24px;
             }
+
+            @include extra-large-desktop () {
+                font-size: 36px;
+            }
         }
 
         img {
             width: 1.15rem;
+
+            @include extra-large-desktop () {
+                width: 1.5rem;
+            }
         }
+
     }
 
     .home-description {
@@ -74,14 +103,21 @@
         @include tablet {
             font-size: 12px;
         }
+
+        @include extra-large-desktop () {
+            font-size: 16px;
+            line-height: 1.25rem;
+            max-width: 45rem
+
+        }
     }
 
-    .home-info-icons-container{
+    .home-info-icons-container {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
         margin-top: .5rem;
-        gap: 1rem;
+        gap: 2rem;
 
         @include tablet {
             flex-direction: row;
@@ -93,6 +129,16 @@
             gap: 10rem;
         }
 
+        @include extra-large-desktop () {
+            gap: 30rem;
+
+        }
+
+        .home-info-wrapper {
+            display: flex;
+            gap: 1rem;
+        }
+
         div {
             display: flex;
             align-items: center;
@@ -100,16 +146,27 @@
             gap: .25rem;
             font-size: 10px;
 
+            @include extra-large-desktop () {
+                font-size: 16px;
+    
+            }
+
             @include tablet {
                 font-size: 12px;
             }
-            
-            p,a {
+
+            p,
+            a {
                 color: $grey-color;
+
+                @include extra-large-desktop () {
+                    font-size: 14px;
+        
+                }
             }
 
             a {
-                 color: $primary-color;
+                color: $primary-color;
             }
 
             i {
@@ -120,7 +177,7 @@
                     font-size: 16px;
                 }
             }
-        
+
         }
 
         .home-social-icons {
@@ -129,7 +186,7 @@
             align-items: center;
             align-self: center;
             gap: .75rem;
-            
+
             @include laptop {
                 align-self: flex-start;
             }
@@ -150,16 +207,24 @@
         align-items: center;
         margin-top: 1.5rem;
         gap: .5rem;
-
+  
         img {
             width: 2.25rem;
+            cursor: pointer;
+            transition: 1s;
 
             @include tablet {
                 width: 3rem;
             }
+
+            &:hover {
+                filter: brightness(1.5);
+                transform: scale(1.1);
+            }
         }
 
-      
+       
+
     }
 
     .home-btns {
@@ -185,28 +250,44 @@
             border-radius: .5rem;
             color: $black-color;
             font-size: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                @include btn-hover();
+            }
 
             @include tablet {
                 font-size: 12px;
             }
 
+            @include extra-large-desktop () {
+                font-size: 16px;
+                padding: .5rem 1.25rem;
+            }
+
             i {
                 font-size: 12px;
                 color: $black-color;
+
+                @include extra-large-desktop () {
+                    font-size: 16px;
+                }
             }
+
         }
     }
 
-        .globe-image {
-            display: none;
-            width: 20%;
-            max-width: 35rem;
-            position: absolute;
-            right: 10%;
-            bottom: 0;
-            
-            @include laptop {
-                display: inline-block;
-            }
+    .globe-image {
+        display: none;
+        width: 20%;
+        max-width: 18rem;
+        position: absolute;
+        right: 15%;
+        bottom: 0;
+
+        @include laptop {
+            display: inline-block;
+        }
     }
 }

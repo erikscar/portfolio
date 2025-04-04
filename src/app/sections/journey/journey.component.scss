@@ -3,13 +3,7 @@
 
 
 #journey-section {
-    background-color: #15181C;
-    width: 100%;
-    padding: 1.5rem;
-
-    @include tablet {
-        padding: 1.5rem 4rem;
-    }
+    @include section-container();
 
     .journey-title {
         @include section-title();
@@ -20,6 +14,14 @@
     }
 
     .journey-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include large-desktop() {
+            flex-direction: row;
+            gap: 2rem;
+        }
 
         .experience {
             margin-top: 2rem;
@@ -27,6 +29,10 @@
             .journey-subtitle {
                 font-size: 22px;
                 font-weight: 900;
+
+                @include extra-large-desktop() {
+                    font-size: 26px;
+                }
             }
 
             .journey-content {
@@ -75,6 +81,11 @@
                     @include tablet {
                         font-size: 14px;
                     }
+
+                    @include large-desktop() {
+                        max-width: 100rem;
+                        line-height: 1.25rem;
+                    }
                 }
             }
         }
@@ -85,6 +96,10 @@
                 font-size: 22px;
                 font-weight: 900;
                 margin-top: 2rem;
+
+                @include extra-large-desktop() {
+                    font-size: 26px;
+                }
             }
 
             .academic-card {
@@ -92,7 +107,14 @@
                 padding: 1rem 1.5rem 1.5rem 1.5rem;
                 margin-top: 1rem;
                 border-radius: .5rem;
-                
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    border: 1px solid $primary-color;
+                    transform: translateY(-5px);
+                }
+
                 .academic-card-title-wrapper {
                     display: flex;
                     flex-direction: column;
@@ -106,6 +128,12 @@
 
                     h1 {
                         font-size: 14px;
+
+                        @include desktop() {
+                            font-size: 20px;
+                        }
+
+    
                     }
 
                     div {
@@ -121,6 +149,13 @@
                         align-items: center;
                         gap: .5rem;
 
+                        @include desktop() {
+                            font-size: 12px;
+                        }
+
+                        @include large-desktop() {
+                            font-size: 14px;
+                        }
                         i { 
                             color: $black-color;
                         }
@@ -135,6 +170,10 @@
 
                     @include tablet {
                         font-size: 14px;
+                    }
+
+                    @include desktop() {
+                        font-size: 16px;
                     }
                 }
 

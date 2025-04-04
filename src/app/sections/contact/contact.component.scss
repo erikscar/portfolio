@@ -3,13 +3,7 @@
 
 
 #contact-section {
-    background-color: #15181C;
-    width: 100%;
-    padding: 1.5rem;
-
-    @include tablet {
-        padding: 1.5rem 4rem;
-    }
+   @include section-container();
     
     .contact-title {
         @include section-title();
@@ -40,18 +34,30 @@
 
             i {
                 font-size: 20px;
+
+                @include large-desktop() {
+                    font-size: 24px;
+                }
             }
 
             .info {
 
                 h2 {
                     font-size: 16px;
+
+                    @include large-desktop() {
+                        font-size: 20px;
+                    }
                 }
 
                 p {
                     color: $grey-color;
                     font-size: 12px;
                     margin-top: .5rem;
+
+                    @include large-desktop() {
+                        font-size: 14px;
+                    }
                 }
 
                 .contact-icons {
@@ -62,6 +68,10 @@
 
                     i {
                         font-size: 24px;
+
+                        @include large-desktop() {
+                            font-size: 30px;
+                        }
                     }
                 }
             }
@@ -74,6 +84,24 @@
         padding: 1.75rem;
         border-radius: 1rem;
         margin-top: 2rem;
+
+        .name-email-input {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop() {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 4rem;
+            }
+
+            .input-group {
+                @include desktop() {
+                    width: 50%;
+                }
+            }
+           
+        }
 
         label {
             color: $grey-color;
@@ -98,9 +126,23 @@
             border-radius: .5rem;
             margin-top: 1rem;
             font-size: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                @include btn-hover();
+            }
+
+            @include large-desktop() {
+                font-size: 14px;
+            }
 
             i {
                 color: $black-color;
+
+                @include large-desktop() {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -110,7 +152,13 @@
         padding: 1.5rem 1rem;
         border-top: 1px solid $grey-color;
         border-bottom: 1px solid $grey-color;
+        display: flex;
+        flex-direction: column;
 
+        @include large-desktop() {
+            flex-direction: row;
+            justify-content: space-between;
+        }
         .aboutme {
 
             h2 {
@@ -138,7 +186,7 @@
                 margin-top: .75rem;
                 font-size: 12px;
                 color: $grey-color;
-
+                max-width: 25rem;
                 @include tablet() {
                     font-size: 16px;
                 }

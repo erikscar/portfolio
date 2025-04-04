@@ -6,28 +6,61 @@
   align-items: center;
 }
 
+@mixin section-container {
+  background-color: #15181C;
+  width: 100%;
+  padding: 1.5rem;
+
+  @include tablet {
+      padding: 3rem 4rem;
+  }
+
+  @include large-desktop {
+      padding: 3rem 8rem;
+  }
+
+  @include extra-large-desktop {
+      padding: 3rem 22rem;
+  }
+}
+
 @mixin section-title {
   color: $primary-color;
   font-size: 22px;
   text-align: center;
+  margin-top: 1rem;
 
   @include tablet() {
     text-align: start;
     font-size: 26px;
   }
+
+  
+  @include extra-large-desktop () {
+    font-size: 30px;
+}
 }
 
 @mixin section-description {
   color: $grey-color;
   font-size: 12px;
   margin-top: .5rem;
-  max-width: 40rem;
+  max-width: 45rem;
   text-align: center;
 
   @include tablet() {
     text-align: start;
     font-size: 14px;
   }
+
+  @include extra-large-desktop () {
+    font-size: 16px;
+}
+}
+
+@mixin btn-hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 6px 20px rgba($primary-color, 0.45)
 }
 
 @mixin tablet {
