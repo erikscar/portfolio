@@ -6,6 +6,7 @@
     background-color: #15181C;
     width: 100%;
     padding: 1.5rem;
+    position: relative;
 
     @include tablet {
         padding: 1.5rem 4rem;
@@ -87,6 +88,11 @@
             justify-content: space-between;
         }
 
+        @include laptop {
+            justify-content: flex-start;
+            gap: 10rem;
+        }
+
         div {
             display: flex;
             align-items: center;
@@ -124,9 +130,14 @@
             align-self: center;
             gap: .75rem;
             
+            @include laptop {
+                align-self: flex-start;
+            }
+
             i {
-                font-size: 25px;
+                font-size: 32px;
                 color: $white-color;
+
                 @include tablet {
                     font-size: 40px;
                 }
@@ -188,12 +199,14 @@
 
         .globe-image {
             display: none;
-            width: 25%;
+            width: 20%;
             max-width: 35rem;
-            align-self: flex-end;
-    
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            
             @include laptop {
-    
+                display: inline-block;
             }
     }
 }

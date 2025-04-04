@@ -32,6 +32,7 @@
             border: none;
             padding: .75rem 0;
             width: 33%;
+            max-width: 15rem;
             border-radius: 1rem;
             border: 1px solid $black-color;
             font-size: 10px;
@@ -43,12 +44,23 @@
     }
 
     .project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-top: 2rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        @include laptop(){
+            flex-direction: row;
+            
+        }
 
         .project-card {
             background-color: rgba(66, 65, 65, 0.2);
             border-radius: 1rem;
-            margin-top: 1rem;
+            max-width: 22rem;
 
                 img {
                     width: 100%
@@ -117,5 +129,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 1rem;
     }
 }
