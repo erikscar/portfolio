@@ -9,69 +9,23 @@
     </div>
 
     <div class="project-container">
-        <div class="project-card">
+        <div class="project-card" *ngFor="let projectCard of projectCards.slice(index, index + 3); let i = index" [ngStyle]="{ '--delay': (i * 0.2) + 's' }"> 
             <div class="project-img-wrapper">
-                <img src="/SwiftCart.jpg" alt="">
+                <img [src]="projectCard.imgSrc" [alt]="projectCard.name + '-image'">
             </div>
             
             <div class="project-content">
-                <h1>Nome do Projeto</h1>
-                <p>E-commerce simulation project using ReactJS for the user interface, JavaScript for dynamic functionalities, NodeJS for the backend, ExpressJS for the web server and MySQL...E-commerce simulation project using ReactJS for the user interface,E-commerce simulation project using ReactJS for the user interface,</p>
+                <h1>{{ projectCard.name }}</h1>
+                <p>{{ projectCard.description }}</p>
                 <div class="project-btns">
-                    <a href="">Ver Demo <i class="fa-solid fa-link"></i></a>
-                    <a href="">GitHub <i class="fa-brands fa-github"></i></a>
+                    <a [href]="projectCard.demo">Ver Demo <i class="fa-solid fa-link"></i></a>
+                    <a [href]="projectCard.github">GitHub <i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </div>
-
-        <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="/SwiftCart.jpg" alt="">
-            </div>
-            
-            <div class="project-content">
-                <h1>Nome do Projeto</h1>
-                <p>E-commerce simulation project using ReactJS for the user interface, JavaScript for dynamic functionalities, NodeJS for the backend, ExpressJS for the web server and MySQL...E-commerce simulation project using ReactJS for the user interface,E-commerce simulation project using ReactJS for the user interface,</p>
-                <div class="project-btns">
-                    <a href="">Ver Demo <i class="fa-solid fa-link"></i></a>
-                    <a href="">GitHub <i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="/SwiftCart.jpg" alt="">
-            </div>
-            
-            <div class="project-content">
-                <h1>Nome do Projeto</h1>
-                <p>E-commerce simulation project using ReactJS for the user interface, JavaScript for dynamic functionalities, NodeJS for the backend, ExpressJS for the web server and MySQL...E-commerce simulation project using ReactJS for the user interface,E-commerce simulation project using ReactJS for the user interface,</p>
-                <div class="project-btns">
-                    <a href="">Ver Demo <i class="fa-solid fa-link"></i></a>
-                    <a href="">GitHub <i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="/SwiftCart.jpg" alt="">
-            </div>
-            
-            <div class="project-content">
-                <h1>Nome do Projeto</h1>
-                <p>E-commerce simulation project using ReactJS for the user interface, JavaScript for dynamic functionalities, NodeJS for the backend, ExpressJS for the web server and MySQL...E-commerce simulation project using ReactJS for the user interface,E-commerce simulation project using ReactJS for the user interface,</p>
-                <div class="project-btns">
-                    <a href="">Ver Demo <i class="fa-solid fa-link"></i></a>
-                    <a href="">GitHub <i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="more-projects">
-        <p>Mais Projetos <i class="fa-solid fa-chevron-right"></i></p>
+        <p (click)="onCarrouselClick()">Mais Projetos <i class="fa-solid fa-chevron-right"></i></p>
     </div>
 </div>  

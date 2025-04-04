@@ -63,6 +63,12 @@
   box-shadow: 4px 6px 20px rgba($primary-color, 0.45)
 }
 
+@mixin link-hover {
+  color: $primary-color;
+  border-bottom: 1px solid $primary-color;
+  transform: scale(1.05);
+}
+
 @mixin tablet {
   @media (min-width: 576px) {
     @content;

@@ -54,7 +54,6 @@
         justify-content: center;
         margin-top: 2rem;
         gap: 2rem;
-        flex-wrap: wrap;
 
         @include laptop() {
             flex-direction: row;
@@ -67,6 +66,9 @@
             max-width: 22rem;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0; 
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: var(--delay);
 
             &:hover {
                 @include btn-hover();
@@ -139,6 +141,11 @@
                 }
             }
         }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
     }
 
     .more-projects {
@@ -146,5 +153,17 @@
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
+        cursor: pointer;
     }
 }
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
