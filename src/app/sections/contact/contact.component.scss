@@ -68,7 +68,12 @@
 
                     i {
                         font-size: 24px;
-
+                            transition: transform 0.5s ease, box-shadow 0.3s ease;
+                            
+                            &:hover {
+                                filter: brightness(.9);
+                                transform: scale(1.1);
+                        }
                         @include large-desktop() {
                             font-size: 30px;
                         }
@@ -250,6 +255,15 @@
                     }
                 }
             }
+
+            i {
+                transition: transform 0.5s ease, box-shadow 0.3s ease;
+                &:hover {
+                    filter: brightness(.9);
+                    transform: scale(1.1);
+                }
+            }
+           
         }
     }
 
