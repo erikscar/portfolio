@@ -3,43 +3,43 @@
      [
         {
             "name": "Swift-Cart",
-            "description": "E-commerce simulation project using ReactJS for the user interface, JavaScript for dynamic functionalities, NodeJS for the backend, ExpressJS for the web server and MySQL...E-commerce simulation project using ReactJS for the user interface,E-commerce simulation project using ReactJS for the user interface,",
-            "imgSrc": "/SwiftCart.jpg", 
-            "github": "#",
-            "demo": "#"
+            "description": "Projeto de simulação de comércio eletrônico que utiliza ReactJS para a interface do usuário, JavaScript para as funcionalidades dinâmicas, NodeJS para o backend, ExpressJS para o servidor web e MySQL para a base de dados. Oferece operações CRUD para produtos, carrinhos e favoritos, cujo principal objetivo era criar uma experiência de compra online intuitiva e agradável.",
+            "imgSrc": "/SwiftCart.png", 
+            "github": "https://github.com/erikscar/swift-cart",
+            "demo": "https://github.com/erikscar/swift-cart"
         },
         {
-            "name": "",
-            "description": "",
-            "imgSrc": "", 
+            "name": "Meu Portfólio",
+            "description": "Projeto de portfólio pessoal desenvolvido com Angular para a construção da interface, utilizando SASS para estilização. Apresenta meus projetos com destaque visual e organização, focando em uma navegação fluída e experiência do usuário intuitiva. O objetivo era criar uma plataforma funcional para demonstrar minhas habilidades técnicas e destacar meus trabalhos",
+            "imgSrc": "/MyPortfolio.png", 
+            "github": "https://github.com/erikscar/portfolio",
+            "demo": "https://erikscar-portfolio.vercel.app/" 
+        },
+        {
+            "name": "Weather Card",
+            "description": "Projeto de site interativo que utiliza HTML5, CSS3 e JavaScript para fornecer informações meteorológicas em tempo real. Através da OpenWeather API, o usuário pode pesquisar o clima de uma cidade, e o site exibe a temperatura, umidade e condições climáticas. A imagem de fundo do site muda dinamicamente, dependendo do tema do clima da cidade pesquisada.",
+            "imgSrc": "/Weather Card.png", 
+            "github": "https://github.com/erikscar/weather-card-app",
+            "demo": "https://weather-card-app-silk.vercel.app/" 
+        },
+        {
+            "name": "Em Construção",
+            "description": "...",
+            "imgSrc": "/construction.png", 
             "github": "",
             "demo": "" 
         },
         {
-            "name": "",
-            "description": "",
-            "imgSrc": "", 
+            "name": "Em Construção",
+            "description": "...",
+            "imgSrc": "/construction.png", 
             "github": "",
             "demo": "" 
         },
         {
-            "name": "",
-            "description": "",
-            "imgSrc": "", 
-            "github": "",
-            "demo": "" 
-        },
-        {
-            "name": "",
-            "description": "",
-            "imgSrc": "", 
-            "github": "",
-            "demo": "" 
-        },
-        {
-            "name": "",
-            "description": "",
-            "imgSrc": "", 
+            "name": "Em Construção",
+            "description": "...",
+            "imgSrc": "/construction.png", 
             "github": "",
             "demo": "" 
         }
