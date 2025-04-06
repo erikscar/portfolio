@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { AcademicCard } from '../../interfaces/AcademicCard';
+import db from "../../../data/db.json";
 
 @Component({
   selector: 'app-journey',
@@ -8,7 +10,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './journey.component.scss'
 })
 export class JourneyComponent {
-  @Input() academicCards: AcademicCard[] = []
+
+  @Input() academicCards: AcademicCard[] = db.Academics;
 
   index = 0;
 
@@ -18,11 +21,4 @@ export class JourneyComponent {
       this.index = 0;
     }
   }
-}
-
-interface AcademicCard {
-  name: string,
-  author: string,
-  description: string,
-  status: string,
 }

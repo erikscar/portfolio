@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ProjectCard } from '../../interfaces/ProjectCard';
+import db from "../../../data/db.json";
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +10,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  @Input() projectCards: ProjectCard[] = []
+  @Input() projectCards: ProjectCard[] = db.Projects;
 
   index = 0;
 
@@ -19,15 +21,6 @@ export class ProjectsComponent {
       this.index = 0;
     }
   }
-}
-
-
-interface ProjectCard {
-  name: string,
-  description: string,
-  imgSrc: string,
-  github: string,
-  demo: string
 }
 
 
