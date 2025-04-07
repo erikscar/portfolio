@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { AcademicCard } from '../../interfaces/AcademicCard';
-import db from "../../../data/db.json";
+import Academics from "../../../data/Academics.json";
 
 @Component({
   selector: 'app-journey',
@@ -11,7 +11,7 @@ import db from "../../../data/db.json";
 })
 export class JourneyComponent {
 
-  @Input() academicCards: AcademicCard[] = db.Academics;
+  @Input() academicCards: AcademicCard[] = Academics;
 
   index = 0;
 

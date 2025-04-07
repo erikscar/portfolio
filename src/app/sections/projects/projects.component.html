@@ -3,29 +3,21 @@
     <p class="projects-description">Explore minha jornada de projetos e habilidades! Cada parte desta seção reflete meu percurso de aprendizado e evolução, destacando eus conhecimentos adquiridos ao longo do tempo.</p>
 
     <div class="switcher-btns">
-        <button>Projetos</button>
-        <button>Tecnologias</button>
-        <button>Certificados</button>
+        <button (click)="currentTab = 'Projects'">Projetos</button>
+        <button (click)="currentTab = 'Techs'">Tecnologias</button>
+        <button (click)="currentTab = 'Certificates'">Certificados</button>
     </div>
 
-    <div class="project-container">
-        <div class="project-card" *ngFor="let projectCard of projectCards.slice(index, index + 3); let i = index" [ngStyle]="{ '--delay': (i * 0.2) + 's' }"> 
-            <div class="project-img-wrapper">
-                <img [src]="projectCard.imgSrc" [alt]="projectCard.name + '-image'">
-            </div>
-            
-            <div class="project-content">
-                <h1>{{ projectCard.name }}</h1>
-                <p>{{ projectCard.description }}</p>
-                <div class="project-btns">
-                    <a [href]="projectCard.demo" target="_blank">Ver Demo <i class="fa-solid fa-link"></i></a>
-                    <a [href]="projectCard.github" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <ng-container *ngIf="currentTab === 'Projects'">
+        <app-projects-container></app-projects-container>
+    </ng-container>
 
-    <div class="more-projects">
-        <p (click)="onCarrouselClick()">Mais Projetos <i class="fa-solid fa-chevron-right"></i></p>
-    </div>
+    <ng-container *ngIf="currentTab === 'Techs'">
+        <app-techs-container></app-techs-container>
+    </ng-container>
+
+    <ng-container *ngIf="currentTab === 'Certificates'">
+        <app-certificates-container></app-certificates-container>
+    </ng-container>
+    
 </div>  

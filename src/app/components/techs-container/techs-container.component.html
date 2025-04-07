@@ -1,0 +1,6 @@
+<div class="tech-card-container">
+    <div class="tech-card" *ngFor="let techCard of techCards">
+        <img [src]="techCard.image" [alt]="techCard.name + '-image'">
+        <h1>{{ techCard.name }}</h1>
+    </div>
+</div>

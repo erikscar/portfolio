@@ -1,0 +1,16 @@
+@use "../../../scss/mixins" as *;
+@use "../../../scss/variables" as *;
+
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+
+    &certificates {
+        
+        img {
+            width: 10rem;
+        }
+    }
+}
