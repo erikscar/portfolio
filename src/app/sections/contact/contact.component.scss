@@ -120,6 +120,10 @@
             width: 100%;
             margin: .5rem 0;
             border-radius: .5rem;
+            
+            &:focus {
+                outline: 1px solid  $primary-color;
+            }
         }
 
         button {
@@ -164,6 +168,7 @@
             flex-direction: row;
             justify-content: space-between;
         }
+
         .aboutme {
 
             h2 {
@@ -218,9 +223,10 @@
                 font-size: 12px;    
                 cursor: pointer;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background-color: #15181C;
 
                 &:hover {
-                    @include btn-hover();
+                    transform: translateY(-5px);
                 }
                 @include tablet() {
                     font-size: 16px;
