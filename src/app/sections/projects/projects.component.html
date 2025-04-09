@@ -5,7 +5,6 @@
     <div class="switcher-btns">
         <button (click)="currentTab = 'Projects'">Projetos</button>
         <button (click)="currentTab = 'Techs'">Tecnologias</button>
-        <button (click)="currentTab = 'Certificates'">Certificados</button>
     </div>
 
     <ng-container *ngIf="currentTab === 'Projects'">
@@ -14,10 +13,6 @@
 
     <ng-container *ngIf="currentTab === 'Techs'">
         <app-techs-container></app-techs-container>
-    </ng-container>
-
-    <ng-container *ngIf="currentTab === 'Certificates'">
-        <app-certificates-container></app-certificates-container>
     </ng-container>
     
 </div>  

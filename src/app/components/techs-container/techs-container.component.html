@@ -1,5 +1,5 @@
 <div class="tech-card-container">
-    <div class="tech-card" *ngFor="let techCard of techCards">
+    <div class="tech-card" *ngFor="let techCard of techCards; let i = index" [ngStyle]="{ '--delay': (i * 0.1) + 's' }">
         <img [src]="techCard.image" [alt]="techCard.name + '-image'">
         <h1>{{ techCard.name }}</h1>
     </div>
