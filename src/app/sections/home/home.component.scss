@@ -4,13 +4,12 @@
 #home-section {
   @include section-container();
 
-  /* Home Animation Wrapper */
   .home-animation-wrapper {
+    position: relative;
     width: 100%;
     height: 5rem;
-    background-color: $primary-color;
     margin: 0 auto;
-    position: relative;
+    background-color: $primary-color;
 
     @include laptop() {
       height: 8rem;
@@ -20,14 +19,13 @@
       height: 14rem;
     }
 
-    /* Image */
     img {
+      position: absolute;
       width: 5rem;
       height: 5rem;
-      border-radius: 100%;
-      position: absolute;
       bottom: -2.5rem;
       left: 5%;
+      border-radius: 100%;
       border: 1px solid $white-color;
 
       @include tablet {
@@ -50,7 +48,6 @@
     }
   }
 
-  /* Home Content Container */
   .home-content-container {
     display: flex;
     justify-content: space-between;
@@ -58,13 +55,12 @@
     .home-content-wrapper {
       width: 100%;
 
-      /* Home Title Wrapper */
       .home-title-wrapper {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         gap: 0.3rem;
         margin-top: 3.5rem;
-        flex-direction: column;
 
         @include tablet() {
           flex-direction: row;
@@ -74,7 +70,6 @@
           margin-top: 5.5rem;
         }
 
-        /* Home Title */
         .home-title {
           display: flex;
           justify-content: center;
@@ -103,7 +98,6 @@
           }
         }
 
-        /* Home Social Icons */
         .home-social-icons {
           display: flex;
           justify-content: center;
@@ -136,26 +130,24 @@
         }
       }
 
-      /* Home Description */
       .home-description {
+        max-width: 32rem;
         margin-top: 0.5rem;
         font-size: 10px;
         line-height: 0.9rem;
-        max-width: 32rem;
 
         @include tablet {
-          font-size: 14px;
           max-width: 38rem;
+          font-size: 14px;
         }
 
         @include extra-large-desktop() {
+          max-width: 45rem;
           font-size: 16px;
           line-height: 1.25rem;
-          max-width: 45rem;
         }
       }
 
-      /* Home Info Icons Container */
       .home-info-icons-container {
         display: flex;
         align-items: flex-start;
@@ -180,49 +172,54 @@
         .home-info-wrapper {
           display: flex;
           gap: 1rem;
-        }
 
-        /* Home Info Item */
-        .home-info-item {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.25rem;
-          font-size: 10px;
-
-          @include extra-large-desktop() {
-            font-size: 16px;
-          }
-
-          @include tablet {
-            font-size: 12px;
-          }
-
-          p,
-          a {
-            color: $grey-color;
+          .home-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            font-size: 10px;
 
             @include extra-large-desktop() {
-              font-size: 14px;
+              font-size: 16px;
             }
-          }
-
-          a {
-            color: $primary-color;
-          }
-
-          i {
-            color: $grey-color;
-            font-size: 12px;
 
             @include tablet {
-              font-size: 16px;
+              font-size: 12px;
+            }
+
+            a {
+              color: $primary-color;
+
+              @include extra-large-desktop() {
+                font-size: 14px;
+              }
+            }
+
+            p {
+              color: $grey-color;
+
+              @include extra-large-desktop() {
+                font-size: 14px;
+              }
+            }
+
+            i {
+              color: $grey-color;
+              font-size: 12px;
+
+              @include tablet {
+                font-size: 16px;
+              }
+
+              @include extra-large-desktop() {
+                font-size: 14px;
+              }
             }
           }
         }
       }
 
-      /* Home Tech Icons Container */
       .home-tech-icons-container {
         display: flex;
         align-items: center;
@@ -245,7 +242,6 @@
         }
       }
 
-      /* Home Buttons */
       .home-btns {
         display: flex;
         align-items: center;
@@ -262,13 +258,13 @@
           justify-content: center;
           align-items: center;
           gap: 0.5rem;
-          font-weight: 900;
-          background-color: $primary-color;
           padding: 0.5rem 1rem;
+          font-size: 10px;
+          font-weight: 900;
+          color: $black-color;
           border: 0;
           border-radius: 0.5rem;
-          color: $black-color;
-          font-size: 10px;
+          background-color: $primary-color;
           cursor: pointer;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -298,14 +294,14 @@
     }
   }
 
-  /* Globe Image */
   .globe-image {
     display: none;
-    width: 18%;
-    max-width: 18rem;
     position: absolute;
     right: 20%;
     bottom: 0;
+    width: 18%;
+    max-width: 18rem;
+    opacity: 0.4;
 
     @include laptop {
       display: inline-block;

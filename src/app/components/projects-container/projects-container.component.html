@@ -1,18 +1,16 @@
 <div class="project-container">
-    <div class="project-card" *ngFor="let projectCard of projectCards.slice(index, index + 3); let i = index" [ngStyle]="{ '--delay': (i * 0.2) + 's' }"> 
-        <div class="project-img-wrapper">
-            <img [src]="projectCard.imgSrc" [alt]="projectCard.name + '-image'">
-        </div>
+    <article class="project-card" *ngFor="let projectCard of projectCards.slice(index, index + 3); let i = index" [ngStyle]="{ '--delay': (i * 0.2) + 's' }"> 
+        <img [src]="projectCard.imgSrc" [alt]="projectCard.name + '-image'">
         
         <div class="project-content">
             <h1>{{ projectCard.name }}</h1>
             <p>{{ projectCard.description }}</p>
             <div class="project-btns">
-                <a [href]="projectCard.demo" target="_blank">Ver Demo <i class="fa-solid fa-link"></i></a>
-                <a [href]="projectCard.github" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                <a [href]="projectCard.demo" target="_blank" rel="noopener">Ver Demo <i class="fa-solid fa-link"></i></a>
+                <a [href]="projectCard.github" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
             </div>
         </div>
-    </div>
+    </article>
 </div>
 
 <div class="more-projects">

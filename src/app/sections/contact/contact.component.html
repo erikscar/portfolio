@@ -1,77 +1,104 @@
-<div id="contact-section">
-    <h1 class="contact-title">CONTATO</h1>
-    <p class="contact-description">Tem algo para discutir? Me mande uma mensagem por email e vamos conversar.</p>
+<section id="contact-section">
+  <h1 class="contact-title">CONTATO</h1>
+  <p class="contact-description">
+    Tem algo para discutir? Me mande uma mensagem por email e vamos conversar.
+  </p>
 
-    <div class="contact-info-container">
-        <div class="contact-info">
-            <i class="fa-solid fa-envelope"></i>
-            <div class="info">
-                <h2>Email</h2>
-                <p>erikscarcela&#64;gmail.com</p>
-            </div>
-        </div>
-
-        <div class="contact-info">
-            <i class="fa-solid fa-phone"></i>
-            <div class="info">
-                <h2>Contato</h2>
-                <p>+55 (11) 94008-0990</p>
-            </div>
-        </div>
-
-        <div class="contact-info">
-            <i class="fa-regular fa-message"></i>
-            <div class="info">
-                <h2>Social</h2>
-                <div class="contact-icons">
-                    <a href="https://github.com/erikscar" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/erik-scarcela/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
-                </div>
-            </div>
-        </div>
+  <address class="contact-info-container">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i>
+      <div class="info">
+        <h2>Email</h2>
+        <p>erikscarcela&#64;gmail.com</p>
+      </div>
     </div>
 
-    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
-        <div class="name-email-input">
-            <div class="input-group">
-                <label for="">Nome</label>
-                <input type="text" placeholder="Seu Nome..." formControlName="user_name">
-            </div>
+    <div class="contact-info">
+      <i class="fa-solid fa-phone"></i>
+      <div class="info">
+        <h2>Contato</h2>
+        <p>+55 (11) 94008-0990</p>
+      </div>
+    </div>
 
-            <div class="input-group">
-                <label for="">Email</label>
-                <input type="email" placeholder="Seu Email..." formControlName="user_email">
-            </div>
+    <div class="contact-info">
+      <i class="fa-regular fa-message"></i>
+      <div class="info">
+        <h2>Social</h2>
+        <div class="contact-icons">
+          <a href="https://github.com/erikscar" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/erik-scarcela/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
         </div>
-        
-        <label for="">Mensagem</label>
-        <textarea name="" id="" placeholder="Sua Mensagem..." rows="7" formControlName="message"></textarea>
-        <button type="submit">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
-    </form>
+      </div>
+    </div>
+  </address>
 
-    <footer>
-        <div class="aboutme">
-            <h2>ERIK SCARCELA ARAUJO</h2>
-            <h3>DESENVOLVEDOR FULLSTACK</h3>
-            <p>Desenvolvedor Fullstack com foco em criar aplicações completas e funcionais</p>
-        </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div class="name-email-input">
+      <div class="input-group">
+        <label for="user_name">Nome</label>
+        <input
+          type="text"
+          placeholder="Seu Nome..."
+          formControlName="user_name"
+        />
+      </div>
 
-        <div class="links">
-            <h2>Links</h2>
-            <a href="#home-section">Home</a>
-            <a href="#journey-section">Formação</a>
-            <a href="#projects-section">Projetos</a>
-            <a href="#contact-section">Contato</a>
-        </div>
+      <div class="input-group">
+        <label for="user_email">Email</label>
+        <input
+          type="email"
+          placeholder="Seu Email..."
+          formControlName="user_email"
+        />
+      </div>
+    </div>
 
-        <div class="footer-social">
-            <h2>Social</h2>
-            <div>
-                <a href="https://github.com/erikscar" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/erik-scarcela/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
-            </div>
-        </div>
-    </footer>
+    <label for="message">Mensagem</label>
+    <textarea
+      placeholder="Sua Mensagem..."
+      rows="7"
+      formControlName="message"
+    ></textarea>
+    <button type="submit">
+      Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>
+    </button>
+  </form>
 
-    <p class="copy">© 2025 Erik Scarcela Araujo. Todos os Direitos Reservados</p>
-</div>
+  <footer>
+    <div class="aboutme">
+      <h2>ERIK SCARCELA ARAUJO</h2>
+      <h3>DESENVOLVEDOR FULLSTACK</h3>
+      <p>
+        Desenvolvedor Fullstack com foco em criar aplicações completas e
+        funcionais
+      </p>
+    </div>
+
+    <div class="links">
+      <h2>Links</h2>
+      <a href="#home-section">Home</a>
+      <a href="#journey-section">Formação</a>
+      <a href="#projects-section">Projetos</a>
+      <a href="#contact-section">Contato</a>
+    </div>
+
+    <div class="footer-social">
+      <h2>Social</h2>
+      <div>
+        <a href="https://github.com/erikscar" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/erik-scarcela/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </div>
+  </footer>
+
+  <p class="copy">© 2025 Erik Scarcela Araujo. Todos os Direitos Reservados</p>
+</section>

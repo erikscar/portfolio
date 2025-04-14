@@ -2,56 +2,54 @@
 @use "../../../scss/variables" as *;
 
 .tech-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    max-width: 49.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 49.5rem;
 
+  .tech-card {
+    width: 7.5rem;
+    padding: 0.75rem;
+    background-color: $light-black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--delay);
 
-    .tech-card {
-        padding: .75rem;
-        background-color: rgba(66, 65, 65, 0.2);
-        border-radius: .5rem;
-        width: 7.5rem;
-        cursor: pointer;
-        transition: transform 0.5s ease, box-shadow 0.3s ease;
-        opacity: 0; 
-        animation: fadeInUp 0.6s ease-out forwards;
-        animation-delay: var(--delay);
+    &:hover {
+      @include btn-hover();
+    }
+    h1 {
+      font-size: 10px;
 
-        &:hover {
-            @include btn-hover();
-        }
-        h1 {
-            font-size: 10px;
-
-            @include laptop() {
-                font-size: 14px;
-            }
-        }
-
-        img {
-            width: 3rem;
-            margin-top: .5rem;
-            @include laptop() {
-                width: 4rem;
-            }
-        }
+      @include laptop() {
+        font-size: 14px;
+      }
     }
 
+    img {
+      width: 3rem;
+      margin-top: 0.5rem;
+      @include laptop() {
+        width: 4rem;
+      }
+    }
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,229 +1,223 @@
 @use "../../../scss/mixins" as *;
 @use "../../../scss/variables" as *;
 
-
 #journey-section {
-    @include section-container();
+  @include section-container();
 
-    .journey-title {
-        @include section-title();
+  .journey-title {
+    @include section-title();
+  }
+
+  .journey-description {
+    @include section-description();
+  }
+
+  .journey-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include large-desktop() {
+      flex-direction: row;
+      gap: 2rem;
     }
 
-    .journey-description {
-        @include section-description();
+    .journey-experience {
+      margin-top: 2rem;
+
+      .journey-subtitle {
+        font-size: 22px;
+        font-weight: 900;
+
+        @include extra-large-desktop() {
+          font-size: 26px;
+        }
+      }
+
+      .journey-item {
+        position: relative;
+        padding: 0 0 0.75rem 1rem;
+        border-left: 1px solid $primary-color;
+
+        .journey-circle {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          top: 0;
+          left: -8px;
+          background-color: $primary-color;
+          border-radius: 100%;
+        }
+
+        .journey-position {
+          margin-top: 1.5rem;
+          font-size: 18px;
+
+          @include tablet {
+            font-size: 20px;
+          }
+        }
+
+        .journey-company {
+          margin-top: 0.75rem;
+          font-size: 14px;
+          font-weight: 400;
+          color: $primary-color;
+          letter-spacing: 0.05rem;
+          text-align: center;
+
+          @include tablet {
+            text-align: start;
+            font-size: 16px;
+          }
+        }
+
+        p {
+          margin-top: 0.25rem;
+          font-size: 12px;
+          color: $grey-color;
+
+          @include tablet {
+            font-size: 14px;
+          }
+
+          @include large-desktop() {
+            max-width: 100rem;
+            line-height: 1.25rem;
+          }
+        }
+      }
     }
 
-    .journey-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .journey-academic {
+      .journey-subtitle {
+        margin-top: 2rem;
+        font-size: 22px;
+        font-weight: 900;
 
-        @include large-desktop() {
+        @include extra-large-desktop() {
+          font-size: 26px;
+        }
+      }
+
+      .academic-card {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+        margin-top: 1rem;
+        background-color: $light-black;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        animation: fadeInUp 0.6s ease-out forwards;
+        animation-delay: var(--delay);
+
+        &:hover {
+          border: 1px solid $primary-color;
+          transform: translateY(-5px);
+        }
+
+        .academic-card-title-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          @include tablet {
             flex-direction: row;
-            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          h4 {
+            font-size: 14px;
+
+            @include desktop() {
+              font-size: 20px;
+            }
+          }
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.75rem 0;
+            padding: 0.4rem 1rem;
+            gap: 0.5rem;
+            color: $black-color;
+            font-weight: 900;
+            font-size: 10px;
+            background-color: $primary-color;
+            border-radius: 1rem;
+
+            @include desktop() {
+              font-size: 12px;
+            }
+
+            @include large-desktop() {
+              font-size: 14px;
+            }
+            i {
+              color: $black-color;
+            }
+          }
         }
 
-        .experience {
-            margin-top: 2rem;
+        h5 {
+          color: $primary-color;
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0.1rem;
 
-            .journey-subtitle {
-                font-size: 22px;
-                font-weight: 900;
+          @include tablet {
+            font-size: 14px;
+          }
 
-                @include extra-large-desktop() {
-                    font-size: 26px;
-                }
-            }
-
-            .journey-content {
-                border-left: 1px solid $primary-color;
-                padding:0 0 .75rem 1rem;
-                position: relative;
-
-                .circle {
-                    position: absolute;
-                    width: 1rem;
-                    height: 1rem;
-                    border-radius: 100%;
-                    background-color: $primary-color;
-                    top: 0;
-                    left: -8px;
-                }
-
-                h2 {
-                    margin-top: 1.5rem;
-                    font-size: 18px;
-
-                    @include tablet {
-                        font-size: 20px;
-                    }
-                }
-
-                h3 {
-                    margin-top: .75rem;
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: $primary-color;
-                    letter-spacing: .05rem;
-                    text-align: center;
-
-                    @include tablet {
-                        text-align: start;
-                        font-size: 16px;
-                    }
-                }
-
-                p {
-                    margin-top: .25rem;
-                    font-size: 12px;
-                    color: $grey-color;
-
-                    @include tablet {
-                        font-size: 14px;
-                    }
-
-                    @include large-desktop() {
-                        max-width: 100rem;
-                        line-height: 1.25rem;
-                    }
-                }
-            }
+          @include desktop() {
+            font-size: 16px;
+          }
         }
 
-        .academic-background {
+        p {
+          margin-top: 0.5rem;
+          font-size: 12px;
+          color: $grey-color;
+          line-height: 1.25rem;
 
-            .journey-subtitle {
-                font-size: 22px;
-                font-weight: 900;
-                margin-top: 2rem;
-
-                @include extra-large-desktop() {
-                    font-size: 26px;
-                }
-            }
-
-            .academic-card {
-                background-color: rgba(66, 65, 65, 0.2);
-                padding: 1rem 1.5rem 1.5rem 1.5rem;
-                margin-top: 1rem;
-                border-radius: .5rem;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                opacity: 0; 
-                animation: fadeInUp 0.6s ease-out forwards;
-                animation-delay: var(--delay);
-
-                &:hover {
-                    border: 1px solid $primary-color;
-                    transform: translateY(-5px);
-                }
-
-                .academic-card-title-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-
-                    @include tablet {
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-                    }
-
-                    h1 {
-                        font-size: 14px;
-
-                        @include desktop() {
-                            font-size: 20px;
-                        }
-
-    
-                    }
-
-                    div {
-                        margin: .75rem 0;
-                        background-color: $primary-color;
-                        padding: .4rem 1rem;
-                        border-radius: 1rem;
-                        color: $black-color;
-                        font-weight: 900;
-                        font-size: 10px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: .5rem;
-
-                        @include desktop() {
-                            font-size: 12px;
-                        }
-
-                        @include large-desktop() {
-                            font-size: 14px;
-                        }
-                        i { 
-                            color: $black-color;
-                        }
-                    }
-                }
-
-                h2 {
-                    color: $primary-color;
-                    font-size: 12px;
-                    font-weight: 400;
-                    letter-spacing: .1rem;
-
-                    @include tablet {
-                        font-size: 14px;
-                    }
-
-                    @include desktop() {
-                        font-size: 16px;
-                    }
-                }
-
-                p {
-                    font-size: 12px;
-                    color: $grey-color;
-                    margin-top: .5rem;
-                    line-height: 1.25rem;
-
-                    @include tablet {
-                        font-size: 14px;
-                    }
-                }
-            }
-
-            .academic-btn-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: .5rem;
-                
-                button {
-                    background-color: transparent;
-                    border: 0;
-                    font-size: 22px;
-                    transition: transform 0.5s ease, box-shadow 0.3s ease;
-                    cursor: pointer;
-
-                    &:hover {
-                        filter: brightness(.9);
-                        transform: scale(1.1);
-                }
-                }
-
-                
-            }
+          @include tablet {
+            font-size: 14px;
+          }
         }
+      }
+
+      .academic-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        button {
+          background-color: transparent;
+          border: 0;
+          font-size: 22px;
+          transition: transform 0.5s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+
+          &:hover {
+            filter: brightness(0.9);
+            transform: scale(1.1);
+          }
+        }
+      }
     }
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

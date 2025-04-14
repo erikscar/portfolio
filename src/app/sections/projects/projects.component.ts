@@ -10,7 +10,7 @@ import { TechsContainerComponent } from "../../components/techs-container/techs-
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  currentTab: string = "Techs";
+  currentTab: string = "Projects";
 
 }
 

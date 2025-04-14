@@ -1,34 +1,41 @@
-<div id="journey-section">
-    <h1 class="journey-title">TRAJETÓRIA PROFISSIONAL</h1>
-    <p class="journey-description">Minha trajetória profissional e acadêmica, com experiências e formações que moldaram minhas habilidades na tecnologia.</p>
+<section id="journey-section">
+    <header>
+        <h2 class="journey-title">TRAJETÓRIA PROFISSIONAL</h2>
+        <p class="journey-description">Minha trajetória profissional e acadêmica, com experiências e formações que moldaram minhas habilidades na tecnologia.</p>
+    </header>
 
     <div class="journey-container">
-        <div class="experience">
-            <h1 class="journey-subtitle">Experiência</h1>
-            <div class="journey-content">
-                <div class="circle"></div>
-                <h2>FreeLancer</h2>
-                <h3>DESENVOLVEDOR FULLSTACK</h3>
-                <p>Responsável pelo desenvolvimento de aplicações web completas, desde a criação de interfaces até a implementação do back-end e integrações com serviços externos. Atua na construção de soluções escaláveis, seguras e bem estruturadas, aplicando boas práticas de desenvolvimento e metodologias ágeis.Experiência na implementação de APIs, gerenciamento de banco de dados e vivências com nuvem.</p>
-            </div>
 
-            <div class="journey-content">
-                <div class="circle"></div>
-                <h2>Operador de Supermercado</h2>
-                <h3>CHOCOLANDIA</h3>
+        <div class="journey-experience">
+            <h3 class="journey-subtitle">Experiência</h3>
+
+            <article class="journey-item">
+                <div class="journey-circle"></div>
+                <h4 class="journey-position">FreeLancer</h4>
+                <h5 class="journey-company">DESENVOLVEDOR FULLSTACK</h5>
+                <p>Responsável pelo desenvolvimento de aplicações web completas, desde a criação de interfaces até a implementação do back-end e integrações com serviços externos. Atua na construção de soluções escaláveis, seguras e bem estruturadas, aplicando boas práticas de desenvolvimento e metodologias ágeis.Experiência na implementação de APIs, gerenciamento de banco de dados e vivências com nuvem.</p>
+            </article>
+
+            <article class="journey-item">
+                <div class="journey-circle"></div>
+                <h4 class="journey-position">Operador de Supermercado</h4>
+                <h5 class="journey-company">CHOCOLANDIA</h5>
                 <p>Responsável pelo atendimento ao cliente, operação de caixa, conferência de produtos, emissão de notas fiscais e organização de estoque, sempre garantindo eficiência e precisão. Desenvolvi habilidades em trabalho em equipe, resolução de problemas, organização, gestão de tempo e adaptação à pressão.</p>
-            </div>
+            </article>
+
         </div>
 
-        <div class="academic-background">
-            <h1 class="journey-subtitle">Formação e Cursos</h1>
+        <section class="journey-academic">
+            <h3 class="journey-subtitle">Formação e Cursos</h3>
 
-            <div class="academic-card" *ngFor="let academicCard of academicCards.slice(index, index + 3); let i = index" [ngStyle]="{ '--delay': (i * 0.2) + 's' }">
+            <div class="academic-card" *ngFor="let academicCard of academicCards.slice(index, index + 3); let i = index"
+             [ngStyle]="{ '--delay': (i * 0.2) + 's' }"
+             >
                 <div class="academic-card-title-wrapper">
-                    <h1>{{ academicCard.name}}</h1>
-                    <div>{{ academicCard.status }} <i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4>{{ academicCard.name}}</h4>
+                    <span>{{ academicCard.status }} <i class="fa-solid fa-graduation-cap"></i></span>
                 </div> 
-                <h2>{{ academicCard.author }}</h2>
+                <h5>{{ academicCard.author }}</h5>
                 <p>{{ academicCard.description }}</p>
             </div>
     
@@ -36,6 +43,6 @@
                 <button (click)="onCarrouselClick()"><i class="fa-solid fa-chevron-down"></i></button>
             </div>
 
-        </div>
+        </section>
     </div>
-</div>
+</section>

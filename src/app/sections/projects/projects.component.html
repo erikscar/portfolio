@@ -1,19 +1,25 @@
-<div id="projects-section">
-    
-    <h1 class="projects-title">MEU PORTFÓLIO</h1>
-    <p class="projects-description">Explore minha jornada de projetos e habilidades! Cada parte desta seção reflete meu percurso de aprendizado e evolução, destacando eus conhecimentos adquiridos ao longo do tempo.</p>
+<section id="projects-section">
+  <h1 class="projects-title">MEU PORTFÓLIO</h1>
+  <p class="projects-description">
+    Explore minha jornada de projetos e habilidades! Cada parte desta seção
+    reflete meu percurso de aprendizado e evolução, destacando eus conhecimentos
+    adquiridos ao longo do tempo.
+  </p>
 
-    <div class="switcher-btns">
-        <button (click)="currentTab = 'Projects'">Projetos</button>
-        <button (click)="currentTab = 'Techs'">Tecnologias</button>
-    </div>
+  <div class="switcher-btns">
+    <button (click)="currentTab = 'Projects'">Projetos</button>
+    <button (click)="currentTab = 'Techs'">Tecnologias</button>
+  </div>
 
-    <ng-container *ngIf="currentTab === 'Projects'">
-        <app-projects-container></app-projects-container>
-    </ng-container>
+  <ng-container *ngIf="currentTab === 'Projects'">
+    <article>
+      <app-projects-container></app-projects-container>
+    </article>
+  </ng-container>
 
-    <ng-container *ngIf="currentTab === 'Techs'">
-        <app-techs-container></app-techs-container>
-    </ng-container>
-    
-</div>  
+  <ng-container *ngIf="currentTab === 'Techs'">
+    <article>
+      <app-techs-container></app-techs-container>
+    </article>
+  </ng-container>
+</section>
