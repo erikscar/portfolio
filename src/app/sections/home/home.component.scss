@@ -1,317 +1,314 @@
 @use "../../../scss/mixins" as *;
 @use "../../../scss/variables" as *;
 
-
 #home-section {
-    @include section-container();    
+  @include section-container();
 
-    .home-animation-wrapper {
-        width: 100%;
-        height: 5rem;
-        background-color: $primary-color;
-        margin: 0 auto;
-        position: relative;
+  /* Home Animation Wrapper */
+  .home-animation-wrapper {
+    width: 100%;
+    height: 5rem;
+    background-color: $primary-color;
+    margin: 0 auto;
+    position: relative;
 
-        @include laptop () {
-            height: 8rem;
-        }
-
-        @include extra-large-desktop () {
-            height: 14rem;
-        }
-
-
-        img {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 100%;
-            position: absolute;
-            bottom: -2.5rem;
-            left: 5%;
-            border: 1px solid $white-color;
-
-            @include tablet {
-                width: 6rem;
-                height: 6rem;
-                bottom: -3rem;
-            }
-
-            @include laptop() {
-                width: 8rem;
-                height: 8rem;
-            }
-
-            @include extra-large-desktop () {
-                width: 13rem;
-                height: 13rem;
-                bottom: -5rem;
-                left: 3%;
-            }
-
-
-        }
+    @include laptop() {
+      height: 8rem;
     }
 
-    .teste {
-        display: flex;
-        justify-content: space-between;
+    @include extra-large-desktop() {
+      height: 14rem;
     }
+
+    /* Image */
+    img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      position: absolute;
+      bottom: -2.5rem;
+      left: 5%;
+      border: 1px solid $white-color;
+
+      @include tablet {
+        width: 6rem;
+        height: 6rem;
+        bottom: -3rem;
+      }
+
+      @include laptop() {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      @include extra-large-desktop() {
+        width: 13rem;
+        height: 13rem;
+        bottom: -5rem;
+        left: 3%;
+      }
+    }
+  }
+
+  /* Home Content Container */
+  .home-content-container {
+    display: flex;
+    justify-content: space-between;
 
     .home-content-wrapper {
-        width: 100%;
-    }
+      width: 100%;
 
-    .home-title-wrapper {
+      /* Home Title Wrapper */
+      .home-title-wrapper {
         display: flex;
         justify-content: space-between;
-        gap: .3rem;
+        gap: 0.3rem;
         margin-top: 3.5rem;
         flex-direction: column;
-        
+
         @include tablet() {
-            flex-direction: row;
-        }
-        @include extra-large-desktop () {
-            margin-top: 5.5rem;
+          flex-direction: row;
         }
 
+        @include extra-large-desktop() {
+          margin-top: 5.5rem;
+        }
+
+        /* Home Title */
         .home-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: .5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
 
-            h1 {
-                font-size: 20px;
-    
-                @include tablet {
-                    font-size: 24px;
-                }
-    
-                @include extra-large-desktop () {
-                    font-size: 36px;
-                }
+          h1 {
+            font-size: 20px;
+
+            @include tablet {
+              font-size: 24px;
             }
-    
-            img {
-                width: 1.15rem;
-                margin-top: .25rem;
-    
-                @include extra-large-desktop () {
-                    width: 1.5rem;
-                }
+
+            @include extra-large-desktop() {
+              font-size: 36px;
             }
+          }
+
+          img {
+            width: 1.15rem;
+            margin-top: 0.25rem;
+
+            @include extra-large-desktop() {
+              width: 1.5rem;
+            }
+          }
         }
-        
 
+        /* Home Social Icons */
         .home-social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;    
-            gap: 1rem;
-            
-            @include laptop {
-                align-self: flex-start;
-                margin-right: 7rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          @include laptop {
+            align-self: flex-start;
+            margin-right: 7rem;
+          }
+
+          i {
+            font-size: 32px;
+            color: $white-color;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+
+            &:hover {
+              filter: brightness(0.9);
+              transform: scale(1.1);
             }
 
-            
-
-            i {
-                font-size: 32px;
-                color: $white-color;
-                transition: transform 0.5s ease, box-shadow 0.3s ease;
-                
-                &:hover {
-                    filter: brightness(.9);
-                    transform: scale(1.1);
-                }
-
-                @include tablet {
-                    font-size: 40px;
-                }
-
-                @include extra-large-desktop {
-                    font-size: 48px;
-                }
+            @include tablet {
+              font-size: 40px;
             }
+
+            @include extra-large-desktop() {
+              font-size: 48px;
+            }
+          }
         }
+      }
 
-    }
-
-    .home-description {
-        margin-top: .5rem;
+      /* Home Description */
+      .home-description {
+        margin-top: 0.5rem;
         font-size: 10px;
-        line-height: .9rem;
+        line-height: 0.9rem;
         max-width: 32rem;
 
         @include tablet {
-            font-size: 12px;
+          font-size: 14px;
+          max-width: 38rem;
         }
 
-        @include extra-large-desktop () {
-            font-size: 16px;
-            line-height: 1.25rem;
-            max-width: 45rem
-
+        @include extra-large-desktop() {
+          font-size: 16px;
+          line-height: 1.25rem;
+          max-width: 45rem;
         }
-    }
+      }
 
-    .home-info-icons-container {
+      /* Home Info Icons Container */
+      .home-info-icons-container {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         gap: 2rem;
 
         @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
+          flex-direction: row;
+          justify-content: space-between;
         }
 
         @include laptop {
-            justify-content: flex-start;
-            gap: 10rem;
+          justify-content: flex-start;
+          gap: 10rem;
         }
 
-        @include extra-large-desktop () {
-            gap: 30rem;
-
+        @include extra-large-desktop() {
+          gap: 30rem;
         }
 
         .home-info-wrapper {
-            display: flex;
-            gap: 1rem;
+          display: flex;
+          gap: 1rem;
         }
 
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: .25rem;
-            font-size: 10px;
+        /* Home Info Item */
+        .home-info-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.25rem;
+          font-size: 10px;
 
-            @include extra-large-desktop () {
-                font-size: 16px;
-    
+          @include extra-large-desktop() {
+            font-size: 16px;
+          }
+
+          @include tablet {
+            font-size: 12px;
+          }
+
+          p,
+          a {
+            color: $grey-color;
+
+            @include extra-large-desktop() {
+              font-size: 14px;
             }
+          }
+
+          a {
+            color: $primary-color;
+          }
+
+          i {
+            color: $grey-color;
+            font-size: 12px;
 
             @include tablet {
-                font-size: 12px;
+              font-size: 16px;
             }
-
-            p,
-            a {
-                color: $grey-color;
-
-                @include extra-large-desktop () {
-                    font-size: 14px;
-        
-                }
-            }
-
-            a {
-                color: $primary-color;
-            }
-
-            i {
-                color: $grey-color;
-                font-size: 12px;
-
-                @include tablet {
-                    font-size: 16px;
-                }
-            }
-
+          }
         }
-    }
+      }
 
-    .home-tech-icons-container {
+      /* Home Tech Icons Container */
+      .home-tech-icons-container {
         display: flex;
         align-items: center;
         margin-top: 1.5rem;
-        gap: .5rem;
-  
+        gap: 0.5rem;
+
         img {
-            width: 2.25rem;
-            cursor: pointer;
-            transition: 1s;
+          width: 2.25rem;
+          cursor: pointer;
+          transition: 1s;
 
-            @include tablet {
-                width: 3rem;
-            }
+          @include tablet {
+            width: 3rem;
+          }
 
-            &:hover {
-                filter: brightness(1.5);
-                transform: scale(1.1);
-            }
+          &:hover {
+            filter: brightness(1.5);
+            transform: scale(1.1);
+          }
         }
+      }
 
-       
-
-    }
-
-    .home-btns {
+      /* Home Buttons */
+      .home-btns {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: .5rem;
+        gap: 0.5rem;
         margin-top: 2rem;
 
         @include tablet {
-            justify-content: flex-start;
+          justify-content: flex-start;
         }
 
         a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: .5rem;
-            font-weight: 900;
-            background-color: $primary-color;
-            padding: .5rem 1rem;
-            border: 0;
-            border-radius: .5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 900;
+          background-color: $primary-color;
+          padding: 0.5rem 1rem;
+          border: 0;
+          border-radius: 0.5rem;
+          color: $black-color;
+          font-size: 10px;
+          cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+            @include btn-hover();
+          }
+
+          @include tablet {
+            font-size: 12px;
+          }
+
+          @include extra-large-desktop() {
+            font-size: 16px;
+            padding: 0.5rem 1.25rem;
+          }
+
+          i {
+            font-size: 12px;
             color: $black-color;
-            font-size: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-            &:hover {
-                @include btn-hover();
+            @include extra-large-desktop() {
+              font-size: 16px;
             }
-
-            @include tablet {
-                font-size: 12px;
-            }
-
-            @include extra-large-desktop () {
-                font-size: 16px;
-                padding: .5rem 1.25rem;
-            }
-
-            i {
-                font-size: 12px;
-                color: $black-color;
-
-                @include extra-large-desktop () {
-                    font-size: 16px;
-                }
-            }
-
+          }
         }
+      }
     }
+  }
 
-    .globe-image {
-        display: none;
-        width: 18%;
-        max-width: 18rem;
-        position: absolute;
-        right: 20%;
-        bottom: 0;
+  /* Globe Image */
+  .globe-image {
+    display: none;
+    width: 18%;
+    max-width: 18rem;
+    position: absolute;
+    right: 20%;
+    bottom: 0;
 
-        @include laptop {
-            display: inline-block;
-        }
+    @include laptop {
+      display: inline-block;
     }
+  }
 }
