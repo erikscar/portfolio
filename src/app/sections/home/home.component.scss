@@ -3,8 +3,7 @@
 
 
 #home-section {
-    @include section-container();
-    position: relative;
+    @include section-container();    
 
     .home-animation-wrapper {
         width: 100%;

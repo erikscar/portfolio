@@ -7,16 +7,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin: 2rem 0;
     gap: 2rem;
     
     @include laptop() {
         flex-direction: row;
     }
 
-    @include large-desktop() {
-        min-width: 69rem;
-    }
 
     .project-card {
         background-color: rgba(66, 65, 65, 0.2);
