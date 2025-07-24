@@ -7,24 +7,12 @@
 }
 
 @mixin section-container {
-  background-color: #15181C;
   width: 100%;
+  background-color: #15181C;
   padding: 1.5rem;
   position: relative;
   z-index: 0;
   overflow: hidden  ;
-
-  @include tablet {
-      padding: 3rem 4rem;
-  }
-
-  @include large-desktop {
-      padding: 3rem 6rem;
-  }
-
-  @include extra-large-desktop {
-      padding: 3rem 9rem;
-  }
 }
 
 @mixin section-title {

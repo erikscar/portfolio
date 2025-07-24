@@ -2,14 +2,21 @@
 @use "../../../scss/variables" as *;
 
 #projects-section {
-  @include section-container();
+  display: grid;
+  place-content: center;
+  width: 100%;
+  background-color: #15181C;
+  padding-top: 2rem;
 
   .projects-title {
-    @include section-title();
+    width: 50rem;
+    color: $primary-color;
+    margin: .5rem 0;
   }
 
   .projects-description {
-    @include section-description();
+    max-width: 45rem;
+    color: $grey-color;
   }
 
   .switcher-btns {
@@ -28,7 +35,7 @@
       border-radius: 1rem;
       border: none;
       border: 1px solid $black-color;
-      background-color: $light-black;
+      background-color: $light-black-color;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
