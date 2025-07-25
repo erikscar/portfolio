@@ -23,16 +23,7 @@
       position: relative;
       padding: 0 0 0.75rem 1rem;
       border-left: 1px solid $primary-color;
-      max-width: 18rem;
-
-      @include tablet() {
-        max-width: 33rem;
-      }
-
-      @include laptop() {
-        max-width: 45rem;
-      }
-
+      max-width: 45rem;
 
       .journey-circle {
         position: absolute;
@@ -84,15 +75,16 @@
       padding: 1rem;
       background-color: $light-black-color;
       border-radius: .25rem;
-
+      max-width: 45rem;
       .academic-card-title-wrapper {
         display: flex;
-        align-items: center;
+        
         justify-content: space-between;
         flex-direction: column-reverse;
 
         @include tablet() {
           flex-direction: row;
+          align-items: center;
         }
 
         h4 {
@@ -146,18 +138,12 @@
       }
 
       p {
-        max-width: 17rem;
         font-size: 12px;
         margin: .5rem 0;
         line-height: 1.35rem;
 
         @include tablet() {
           font-size: 14px;
-          max-width: 30rem;
-        }
-
-        @include laptop() {
-          max-width: 45rem;
         }
       }
 
