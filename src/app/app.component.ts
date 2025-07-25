@@ -5,11 +5,10 @@ import { HomeComponent } from "./sections/home/home.component";
 import { JourneyComponent } from "./sections/journey/journey.component";
 import { ProjectsComponent } from "./sections/projects/projects.component";
 import { ContactComponent } from "./sections/contact/contact.component";
-import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent, JourneyComponent, ProjectsComponent, ContactComponent, HeaderComponent],
+  imports: [HomeComponent, JourneyComponent, ProjectsComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

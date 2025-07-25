@@ -9,10 +9,11 @@
   margin: 2rem 0;
   gap: 2rem;
   max-width: 50rem;
+
   .project-card {
     background-color: $light-black-color;
     border-radius: 1rem;
-    max-width: 24rem;
+    max-width: 18rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
@@ -20,6 +21,10 @@
     animation-delay: var(--delay);
     min-height: 32rem;
 
+
+    @include tablet() {
+      max-width: 24rem;
+    }
     &:hover {
       @include btn-hover();
     }

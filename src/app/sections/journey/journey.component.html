@@ -23,6 +23,7 @@
                 trabalho em equipe, resolução de problemas, organização, gestão de tempo e adaptação à pressão.</p>
         </article>
 
+        
         <h2 class="journey-subtitle">FORMAÇÃO E CURSOS</h2>
         <div class="academic-card" *ngFor="let academicCard of academicCards.slice(index, index + 3); let i = index"
             [ngStyle]="{ '--delay': (i * 0.2) + 's' }">
@@ -30,6 +31,7 @@
                 <h4>{{ academicCard.name}}</h4>
                 <span>{{ academicCard.status }} <i class="fa-solid fa-graduation-cap"></i></span>
             </div>
+            <div class="line"></div>
             <h5>{{ academicCard.author }}</h5>
             <p>{{ academicCard.description }}</p>
         </div>
@@ -37,7 +39,6 @@
         <div class="academic-btn-wrapper">
             <button (click)="onCarrouselClick()"><i class="fa-solid fa-chevron-down"></i></button>
         </div>
-
 
     </div>
 </section>
