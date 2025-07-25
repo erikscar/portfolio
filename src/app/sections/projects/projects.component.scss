@@ -32,6 +32,15 @@
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+      &.active {
+        background-color: $primary-color;
+        color: $black-color;
+
+        &:hover {
+          color: $black-color;
+        }
+      }
+
       &:hover {
         @include btn-hover();
         color: $primary-color;

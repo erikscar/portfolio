@@ -6,8 +6,8 @@
   </p>
 
   <div class="switcher-btns">
-    <button (click)="currentTab = 'Projects'">Projetos</button>
-    <button (click)="currentTab = 'Techs'">Tecnologias</button>
+    <button (click)="currentTab = 'Projects'" [ngClass]="{ 'active': currentTab === 'Projects' }">Projetos</button>
+    <button (click)="currentTab = 'Techs'" [ngClass]="{ 'active': currentTab === 'Techs' }">Tecnologias</button>
   </div>
 
   <ng-container *ngIf="currentTab === 'Projects'">
