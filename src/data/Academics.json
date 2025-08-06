@@ -16,5 +16,11 @@
         "author": "Plataforma OneBitCode",
         "status": "Finalizado",
         "description": "Curso de desenvolvimento fullstack com JavaScript, criação de APIs com Node.js e Express, desenvolvimento front-end com React, HTML, CSS, Sass e Bootstrap, bancos de dados SQL e NoSQL (MongoDB), arquitetura de software, metodologias ágeis e boas práticas de desenvolvimento web."
-    }
+    },
+        {
+            "name": "Treinamento de SQL para Analistas",
+            "author": "Prof° Ronan Vico",
+            "status": "Em Andamento",
+            "description": "Curso de Microsoft SQL Server e linguagem T‑SQL, focado em analistas, cobrindo conceitos de banco de dados, SSMS, comandos CRUD, funções internas, Stored Procedures, triggers e práticas para uso cotidiano."
+        }
 ]
