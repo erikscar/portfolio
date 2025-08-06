@@ -8,8 +8,11 @@
   },
   {
     "name": "eApp",
-    "description":
-  },
+    "description": "Projeto de marketplace + API que utiliza Angular para a interface do usuário, SASS para o estilo, .NET Core no backend com autenticação via JWT, controle de acesso por roles, e Entity Framework com FluentAPI. Oferece operações CRUD para produtos, usuários e categorias, com gráficos em tempo real via ApexCharts, focando em uma gestão eficiente e segura.",
+    "imgSrc": "/projects-images/construction.png",
+    "github": "https://github.com/erikscar/eapp",
+    "demo": "https://github.com/erikscar/eapp"
+},
   {
     "name": "Weather Card",
     "description": "Projeto de site interativo que utiliza HTML5, CSS3 e JavaScript para fornecer informações meteorológicas em tempo real. Através da OpenWeather API, o usuário pode pesquisar o clima de uma cidade, e o site exibe a temperatura, umidade e condições climáticas. A imagem de fundo do site muda dinamicamente, dependendo do tema do clima da cidade pesquisada.",
